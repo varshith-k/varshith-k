@@ -9,5 +9,5 @@ This is me:
 - 🤔 I’m looking for help with WebDev, DevOps, AI/ML, Coding and so on..
 - 💬 Ask me about anything..
 - 📫 How to reach me: Mail: varshith.kvs@gmail.com
-- 😄 Pronouns: He/Arey/Orey/Arey Entra idhi..
-- ⚡ Fun fact: I'm diagonised with Obsessive Binging Disorder ( Mainly Cinema ).
+- 😄 Pronouns: He/She
+<!-- - ⚡ Fun fact:  -->
