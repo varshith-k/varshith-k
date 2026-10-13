@@ -156,4 +156,22 @@
       iconCopy?.removeAttribute("hidden");
     }, 2000);
   });
+
+  /* Hero portrait portal */
+  const photoTrigger = document.querySelector(".hero-photo-trigger");
+  const photoBackdrop = document.querySelector(".hero-photo-backdrop");
+  if (photoTrigger && photoBackdrop) {
+    const setPhotoOpen = (open) => {
+      photoTrigger.classList.toggle("is-open", open);
+      photoBackdrop.classList.toggle("is-open", open);
+      photoTrigger.setAttribute("aria-expanded", String(open));
+    };
+    photoTrigger.addEventListener("click", () => {
+      setPhotoOpen(!photoTrigger.classList.contains("is-open"));
+    });
+    photoBackdrop.addEventListener("click", () => setPhotoOpen(false));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setPhotoOpen(false);
+    });
+  }
 })();

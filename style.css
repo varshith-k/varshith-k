@@ -409,6 +409,33 @@ button {
   gap: 1rem;
 }
 
+.hero-photo-trigger {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: none;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 450ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hero-photo-trigger:hover {
+  transform: scale(1.06);
+}
+
+.hero-photo-trigger:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.hero-photo-trigger.is-open {
+  z-index: 150;
+  transform: scale(3.6);
+}
+
 .hero-photo {
   width: 3.5rem;
   height: 3.5rem;
@@ -417,6 +444,23 @@ button {
   border: 1px solid var(--line-strong);
   box-shadow: var(--shadow-sm);
   flex-shrink: 0;
+  pointer-events: none;
+}
+
+.hero-photo-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 140;
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 320ms var(--ease);
+}
+
+.hero-photo-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .hero-eyebrow {
@@ -1253,6 +1297,10 @@ button {
   .marquee-track,
   .scroll-line {
     animation: none;
+  }
+  .hero-photo-trigger,
+  .hero-photo-backdrop {
+    transition: none;
   }
 }
 
