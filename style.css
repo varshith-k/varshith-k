@@ -598,6 +598,31 @@ button {
   background: radial-gradient(circle at 70% 20%, color-mix(in srgb, var(--accent) 30%, transparent), transparent 55%);
 }
 
+.case-media-photo::before {
+  content: none;
+}
+
+.case-media-photo img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-media-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.12) 45%, transparent 70%);
+}
+
+.case-media-photo .case-media-tag {
+  z-index: 2;
+}
+
 .case-media-plate-alt {
   background: linear-gradient(145deg, color-mix(in srgb, var(--accent-2) 18%, var(--bg-elevated)), var(--bg-elevated));
 }
@@ -810,7 +835,7 @@ button {
 
 .archive-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 1.5rem;
 }
