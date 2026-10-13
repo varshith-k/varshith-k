@@ -562,9 +562,14 @@ button {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
+  align-items: start;
   padding: clamp(2rem, 4vw, 3rem) 0;
   border-top: 1px solid var(--line);
+}
+
+.case-media {
+  position: sticky;
+  top: 6.5rem;
 }
 
 .case-study:last-of-type {
@@ -1269,6 +1274,10 @@ button {
 
   .case-study-reverse .case-media {
     order: 0;
+  }
+
+  .case-media {
+    position: static;
   }
 
   .project-grid {
