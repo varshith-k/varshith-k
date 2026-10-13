@@ -530,9 +530,8 @@ button {
 }
 
 .scroll-hint {
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  align-self: flex-end;
+  margin-top: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -560,7 +559,7 @@ button {
 
 .case-study {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: clamp(2rem, 5vw, 4rem);
   align-items: start;
   padding: clamp(2rem, 4vw, 3rem) 0;
@@ -570,6 +569,7 @@ button {
 .case-media {
   position: sticky;
   top: 6.5rem;
+  min-width: 0;
 }
 
 .case-study:last-of-type {
@@ -577,7 +577,7 @@ button {
 }
 
 .case-study-reverse {
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 }
 
 .case-study-reverse .case-media {
