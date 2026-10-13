@@ -1,306 +1,643 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <meta
       name="description"
-      content="Portfolio of Vishnu Sai Varshith Kaki, a software engineer focused on AI systems, backend platforms, and scalable data products."
+      content="Vishnu Sai Varshith Kaki — software engineer building backend platforms, distributed systems, and production AI/LLM applications. MS CS candidate at the University of Florida."
     />
-    <title>Varshith Kaki | Portfolio</title>
+    <meta name="author" content="Vishnu Sai Varshith Kaki" />
+    <meta name="theme-color" content="#0b0d12" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Varshith Kaki — Software Engineer, AI/ML Systems" />
+    <meta
+      property="og:description"
+      content="I build systems that scale — and AI that makes a difference. Backend engineering, distributed systems, and production LLM applications."
+    />
+    <meta property="og:url" content="https://varshithkaki.work" />
+    <meta property="og:image" content="https://varshithkaki.work/assets/headshot.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Varshith Kaki — Software Engineer, AI/ML Systems" />
+    <meta
+      name="twitter:description"
+      content="I build systems that scale — and AI that makes a difference."
+    />
+
+    <link rel="canonical" href="https://varshithkaki.work" />
+    <title>Varshith Kaki — Software Engineer &amp; AI/ML Systems</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..600;1,9..144,400..500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vishnu Sai Varshith Kaki",
+        "alternateName": "Varshith Kaki",
+        "url": "https://varshithkaki.work",
+        "email": "mailto:vishnusaivarshith@gmail.com",
+        "jobTitle": "Software Engineer",
+        "sameAs": [
+          "https://github.com/varshith-k",
+          "https://linkedin.com/in/varshith-kaki"
+        ],
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "University of Florida" },
+          { "@type": "CollegeOrUniversity", "name": "Indian Institute of Information Technology, Sri City" }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <div class="page-glow glow-left" aria-hidden="true"></div>
-    <div class="page-glow glow-right" aria-hidden="true"></div>
+    <!-- Icon sprite -->
+    <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+      <defs>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+        <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" fill="currentColor"/></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M6.94 5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0ZM3.5 8.5h3.4V20H3.5V8.5Zm6.2 0h3.26v1.57h.05c.45-.86 1.56-1.77 3.22-1.77 3.44 0 4.08 2.27 4.08 5.21V20h-3.4v-5.73c0-1.37-.02-3.12-1.9-3.12-1.91 0-2.2 1.49-2.2 3.03V20H9.7V8.5Z" fill="currentColor"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3.5 5.5h17a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-17a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="m3 6.5 9 6.5 9-6.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0 4.5-4.5M12 15 7.5 10.5M4.5 18.5h15" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+        <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.55 1.55M18.25 18.25l1.55 1.55M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.55-1.55M18.25 5.75l1.55-1.55" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.2A8.3 8.3 0 1 1 9.8 4a6.6 6.6 0 0 0 10.2 10.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/></symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M15 8.5V6.5a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2H8" stroke="currentColor" stroke-width="1.6" fill="none"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l5 5 10-11" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+        <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.25" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M9 13.5 7.5 21l4.5-2.5 4.5 2.5-1.5-7.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/></symbol>
+      </defs>
+    </svg>
 
-    <main class="site-shell">
-      <aside class="sidebar card">
-        <div class="avatar">VK</div>
-        <p class="eyebrow">Portfolio</p>
-        <h1>Vishnu Sai Varshith Kaki</h1>
-        <p class="intro-copy">
-          Software engineer building practical AI systems, backend platforms, and
-          scalable data-driven products.
-        </p>
+    <div class="noise" aria-hidden="true"></div>
 
-        <div class="pill-row">
-          <span class="pill pill-primary">Open to SWE and AI roles</span>
-          <span class="pill">Gainesville, Florida</span>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-reveal-skip>
+      <div class="header-inner">
+        <a class="wordmark" href="#top">
+          <span class="wordmark-mark">VK</span>
+          <span class="wordmark-full">Varshith&nbsp;Kaki</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="#work"><span class="nav-index">01</span>Work</a>
+          <a href="#about"><span class="nav-index">02</span>About</a>
+          <a href="#experience"><span class="nav-index">03</span>Experience</a>
+          <a href="#skills"><span class="nav-index">04</span>Skills</a>
+          <a href="#education"><span class="nav-index">05</span>Education</a>
+          <a href="#contact"><span class="nav-index">06</span>Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+            <svg class="icon theme-icon-dark" width="18" height="18"><use href="#i-moon"/></svg>
+            <svg class="icon theme-icon-light" width="18" height="18"><use href="#i-sun"/></svg>
+          </button>
+          <a class="button button-ghost resume-link" href="./assets/Varshith-Kaki-Resume.pdf" download>
+            <svg class="icon" width="16" height="16"><use href="#i-download"/></svg>
+            Resume
+          </a>
+          <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+            <svg class="icon" width="20" height="20"><use href="#i-menu"/></svg>
+          </button>
         </div>
+      </div>
+    </header>
 
-        <div class="contact-list">
-          <a href="mailto:vishnusaivarshith@gmail.com">
-            <span>Email</span>
-            <strong>vishnusaivarshith@gmail.com</strong>
-          </a>
-          <a href="tel:+13522191474">
-            <span>Phone</span>
-            <strong>+1 (352) 219-1474</strong>
-          </a>
-          <a href="https://github.com/varshith-k" target="_blank" rel="noreferrer">
-            <span>GitHub</span>
-            <strong>github.com/varshith-k</strong>
-          </a>
-          <a href="https://linkedin.com/in/varshith-kaki" target="_blank" rel="noreferrer">
-            <span>LinkedIn</span>
-            <strong>linkedin.com/in/varshith-kaki</strong>
-          </a>
-          <a href="https://varshithkaki.work" target="_blank" rel="noreferrer">
-            <span>Website</span>
-            <strong>varshithkaki.work</strong>
-          </a>
-        </div>
+    <div class="mobile-nav" id="mobile-nav" data-state="closed">
+      <nav aria-label="Mobile">
+        <a href="#work"><span class="nav-index">01</span>Work</a>
+        <a href="#about"><span class="nav-index">02</span>About</a>
+        <a href="#experience"><span class="nav-index">03</span>Experience</a>
+        <a href="#skills"><span class="nav-index">04</span>Skills</a>
+        <a href="#education"><span class="nav-index">05</span>Education</a>
+        <a href="#contact"><span class="nav-index">06</span>Contact</a>
+      </nav>
+      <div class="mobile-nav-footer">
+        <a href="https://github.com/varshith-k" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/varshith-kaki" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:vishnusaivarshith@gmail.com">Email</a>
+      </div>
+    </div>
 
-        <section class="focus-section">
-          <p class="section-label">Core Focus</p>
-          <ul>
-            <li>LangChain, LangGraph, RAG, tool-calling, and agent workflows</li>
-            <li>FastAPI, Kafka, PostgreSQL, Docker, Kubernetes, and cloud systems</li>
-            <li>Production AI platforms with observability and performance tuning</li>
-          </ul>
-        </section>
-      </aside>
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-inner">
+          <div class="hero-intro reveal">
+            <img class="hero-photo" src="./assets/headshot.jpg" alt="Portrait of Vishnu Sai Varshith Kaki" width="112" height="112" />
+            <p class="hero-eyebrow">
+              <span class="status-dot" aria-hidden="true"></span>
+              Open to Software Engineering &amp; AI/ML roles — Gainesville, FL
+            </p>
+          </div>
 
-      <section class="content">
-        <section class="card hero">
-          <nav class="nav">
-            <a href="#about">About</a>
-            <a href="#experience">Journey</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-          </nav>
+          <h1 class="hero-title">
+            <span class="reveal-line"><span class="reveal">Vishnu&nbsp;Sai</span></span>
+            <span class="reveal-line"><span class="reveal">Varshith&nbsp;Kaki</span></span>
+          </h1>
 
-          <div class="hero-grid">
-            <div>
-              <p class="eyebrow">About Me</p>
-              <h2>I build reliable AI products that hold up beyond the demo.</h2>
-              <p class="hero-copy">
-                I’m a Computer Science graduate student at the University of Florida with
-                experience across AI systems, backend engineering, data platforms, and
-                full-stack product development. I like turning ambitious ideas into
-                observable, production-ready systems.
-              </p>
-              <div class="cta-row">
-                <a class="button button-primary" href="https://github.com/varshith-k" target="_blank" rel="noreferrer">View GitHub</a>
-                <a class="button button-secondary" href="mailto:vishnusaivarshith@gmail.com">Contact Me</a>
+          <div class="hero-row">
+            <p class="hero-statement reveal">
+              I build systems that scale — and AI that makes a difference. Backend platforms,
+              distributed systems, and production LLM applications, shipped with the same rigor
+              as the research behind them.
+            </p>
+
+            <div class="hero-meta reveal">
+              <div class="hero-meta-row">
+                <span class="hero-meta-label">Currently</span>
+                <span>MS Computer Science, University of Florida — 4.0 GPA</span>
               </div>
-            </div>
-
-            <div class="hero-stats">
-              <div class="stat-box">
-                <strong>10K+</strong>
-                <span>daily inference requests supported</span>
+              <div class="hero-meta-row">
+                <span class="hero-meta-label">Background</span>
+                <span>~3 years production software engineering, Couture AI</span>
               </div>
-              <div class="stat-box">
-                <strong>86%</strong>
-                <span>latency reduction on AI backends</span>
-              </div>
-              <div class="stat-box">
-                <strong>10M+</strong>
-                <span>records processed in ETL workflows</span>
-              </div>
-              <div class="stat-box">
-                <strong>4.0</strong>
-                <span>MS Computer Science GPA at UF</span>
+              <div class="hero-cta-row">
+                <a class="button button-primary magnetic" href="#work">
+                  Explore My Work
+                  <svg class="icon" width="16" height="16"><use href="#i-arrow"/></svg>
+                </a>
+                <a class="button button-outline magnetic" href="#contact">Get in Touch</a>
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section id="about" class="section-grid">
-          <article class="card">
-            <p class="eyebrow">How I Work</p>
-            <h3>Engineering with systems thinking and product sense</h3>
-            <p class="section-copy">
-              I enjoy building systems that are grounded, maintainable, and useful.
-              That means thinking carefully about data contracts, latency, reliability,
-              monitoring, and the experience of the next engineer who has to extend the work.
+        <div class="hero-marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span>Backend Engineering</span><span>·</span>
+            <span>Distributed Systems</span><span>·</span>
+            <span>LLM Applications</span><span>·</span>
+            <span>RAG &amp; Agents</span><span>·</span>
+            <span>Cloud &amp; Data Platforms</span><span>·</span>
+            <span>Backend Engineering</span><span>·</span>
+            <span>Distributed Systems</span><span>·</span>
+            <span>LLM Applications</span><span>·</span>
+            <span>RAG &amp; Agents</span><span>·</span>
+            <span>Cloud &amp; Data Platforms</span><span>·</span>
+          </div>
+        </div>
+
+        <a class="scroll-hint" href="#work" aria-hidden="true">
+          <span>Scroll</span>
+          <span class="scroll-line"></span>
+        </a>
+      </section>
+
+      <section class="section" id="work">
+        <div class="section-head reveal">
+          <p class="section-kicker">01 — Selected Work</p>
+          <h2 class="section-title">Things I've shipped and broken<br class="br-desktop" /> things to understand better.</h2>
+        </div>
+
+        <article class="case-study reveal">
+          <div class="case-media" aria-hidden="true">
+            <div class="case-media-plate">
+              <span class="case-media-tag">hurricaneweek.miami</span>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-tag">ShellHacks / MLH 2026 · Live Product</p>
+            <span class="award-badge">
+              <svg class="icon" width="14" height="14"><use href="#i-award"/></svg>
+              Winner — [MLH] Best Use of Snowflake API
+            </span>
+            <h3>Hurricane Week</h3>
+            <p class="case-desc">
+              An interactive hurricane-preparedness simulator: you're a Miami-Dade resident with
+              $400 and five days before landfall, and every decision — evacuate or shelter,
+              insure or risk it — changes your financial and safety outcome. A deterministic
+              rules engine drives every consequence; an AI coach (Gemini, grounded in your actual
+              choices) explains the outcome afterward instead of deciding it.
             </p>
-
-            <div class="value-grid">
-              <div class="value-card">
-                <h4>AI Systems</h4>
-                <p>RAG pipelines, LLM orchestration, structured outputs, routing, guardrails, and tool-integrated reasoning workflows.</p>
-              </div>
-              <div class="value-card">
-                <h4>Backend Platforms</h4>
-                <p>FastAPI services, streaming consumers, APIs, async workflows, schema validation, and cloud-ready deployment patterns.</p>
-              </div>
-              <div class="value-card">
-                <h4>Data & Observability</h4>
-                <p>Kafka, PostgreSQL, Databricks, PySpark, Prometheus, Grafana, and operational visibility for real systems.</p>
-              </div>
-              <div class="value-card">
-                <h4>Collaboration</h4>
-                <p>Clear ownership, pragmatic architecture, readable code, and a strong bias toward shipping dependable software.</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <p class="eyebrow">Education</p>
-            <h3>Credentials and training</h3>
-            <div class="mini-stack">
-              <div class="mini-card">
-                <span>University of Florida</span>
-                <strong>M.S. Computer Science, 4.0/4.0</strong>
-              </div>
-              <div class="mini-card">
-                <span>IIIT Sri City</span>
-                <strong>B.Tech CSE, 9.55/10 aggregate</strong>
-              </div>
-            </div>
-
-            <p class="section-label">Selected Certifications</p>
-            <ul class="bullet-list">
-              <li>NVIDIA Certified: AI Agents (Multimodal)</li>
-              <li>DeepLearning.AI ML Specialization</li>
-              <li>Microsoft Azure AZ-104</li>
-              <li>IBM Data Engineering</li>
+            <ul class="case-points">
+              <li>Grounded Readiness Assistant answers real prep questions from verified FEMA/NOAA facts via Snowflake Cortex RAG, not generic LLM guesses</li>
+              <li>Replay mode diffs your new run against your last one and explains which decisions moved the score</li>
+              <li>An explicit AI-transparency panel discloses exactly what each AI feature receives — no account or identity data ever leaves the system</li>
+              <li>Full stack: Next.js 16 + FastAPI, with MongoDB Atlas, TimescaleDB (Tiger Data), Snowflake, Gemini, ElevenLabs, and a Solana devnet completion record</li>
             </ul>
-          </article>
-        </section>
-
-        <section id="experience" class="card">
-          <p class="eyebrow">Journey</p>
-          <h3>A path from early builder to production AI engineer</h3>
-          <div class="timeline">
-            <article class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div>
-                <div class="timeline-heading">
-                  <h4>M.S. in Computer Science</h4>
-                  <span>Aug 2025 - May 2027</span>
-                </div>
-                <p class="timeline-org">University of Florida</p>
-                <p>Focused on machine learning systems, distributed systems, data science, and advanced algorithms.</p>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div>
-                <div class="timeline-heading">
-                  <h4>Software Engineer - ML & AI Systems</h4>
-                  <span>Jun 2022 - Aug 2025</span>
-                </div>
-                <p class="timeline-org">Couture AI</p>
-                <p>Built production RAG systems, multi-agent workflows, scalable AI inference backends, and event-driven ETL pipelines with end-to-end observability.</p>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div>
-                <div class="timeline-heading">
-                  <h4>Junior ML Engineer</h4>
-                  <span>Oct 2021 - Feb 2022</span>
-                </div>
-                <p class="timeline-org">Omdena</p>
-                <p>Developed LLM-powered microservices for summarization, classification, and structured extraction with logging and schema validation.</p>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div>
-                <div class="timeline-heading">
-                  <h4>Research Intern - NLP & Multimodal Systems</h4>
-                  <span>May 2021 - Oct 2021</span>
-                </div>
-                <p class="timeline-org">Wipro Technologies</p>
-                <p>Worked on multimodal NLP pipelines and research infrastructure that contributed to an ICON 2021 publication.</p>
-              </div>
-            </article>
+            <div class="case-stack">
+              <span>Next.js</span><span>TypeScript</span><span>FastAPI</span><span>Snowflake Cortex</span><span>Gemini</span><span>ElevenLabs</span><span>MongoDB Atlas</span>
+            </div>
+            <div class="case-links">
+              <a class="button button-primary magnetic" href="https://hurricaneweek.miami" target="_blank" rel="noreferrer">
+                Live Demo <svg class="icon" width="14" height="14"><use href="#i-arrow"/></svg>
+              </a>
+              <a class="button button-outline magnetic" href="https://github.com/varshith-k/hurricaneweek" target="_blank" rel="noreferrer">
+                <svg class="icon" width="15" height="15"><use href="#i-github"/></svg> Source
+              </a>
+            </div>
           </div>
-        </section>
+        </article>
 
-        <section id="projects" class="card">
-          <p class="eyebrow">Projects</p>
-          <h3>Featured work across AI, software, and data</h3>
-          <div class="projects-grid">
-            <article class="project-card">
-              <span class="tag">AI Agent Platform</span>
-              <h4>CryptoPulse AI</h4>
-              <p>Live market intelligence platform with anomaly detection, alerting workflows, and structured AI reasoning over financial data.</p>
-              <div class="chips">
-                <span>FastAPI</span>
-                <span>React</span>
-                <span>Kafka</span>
-                <span>PostgreSQL</span>
-                <span>LLMs</span>
-              </div>
-              <a href="https://github.com/varshith-k/cryptopulse-ai" target="_blank" rel="noreferrer">Explore project</a>
-            </article>
+        <article class="case-study case-study-reverse reveal">
+          <div class="case-media" aria-hidden="true">
+            <div class="case-media-plate case-media-plate-alt">
+              <span class="case-media-tag">25,966 real lots indexed</span>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-tag">Conversational Search Engine</p>
+            <h3>Copart Conversational Search</h3>
+            <p class="case-desc">
+              Natural-language search and multi-turn refinement over ~26,000 real Copart auction
+              lots. Ask for what you want in plain English, change your mind mid-conversation, and
+              always see exactly what the system currently believes you asked for — backed by a
+              deterministic, rule-based filter extractor with an optional LLM extractor behind the
+              same interface.
+            </p>
+            <ul class="case-points">
+              <li>Runs with zero API key: default extraction is deterministic and fully offline-testable</li>
+              <li>Surfaces a real data-coverage gap instead of hiding it — Copart's public export withholds price data, so the app detects that from the data itself and tells the user, rather than estimating a number</li>
+              <li>Structured filtering with deterministic SQL retrieval and explicit conversational state across turns</li>
+            </ul>
+            <div class="case-stack">
+              <span>Python</span><span>FastAPI</span><span>React</span><span>SQLite</span><span>Rule-based NLU</span>
+            </div>
+            <div class="case-links">
+              <a class="button button-outline magnetic" href="https://github.com/varshith-k/copart-conversational-search" target="_blank" rel="noreferrer">
+                <svg class="icon" width="15" height="15"><use href="#i-github"/></svg> Source
+              </a>
+            </div>
+          </div>
+        </article>
 
-            <article class="project-card">
-              <span class="tag">Production RAG</span>
-              <h4>MED-RAG</h4>
-              <p>Grounded retrieval system over 4,400+ research papers using embeddings, vector search, and citation-aware responses.</p>
-              <div class="chips">
-                <span>Python</span>
-                <span>FAISS</span>
-                <span>BioBERT</span>
-                <span>FastAPI</span>
-              </div>
-              <a href="https://github.com/varshith-k" target="_blank" rel="noreferrer">View more</a>
-            </article>
-
-            <article class="project-card">
-              <span class="tag">Event-Driven Intelligence</span>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-card-top">
+              <p class="case-tag">Event-Driven Platform</p>
               <h4>RetailBrain</h4>
-              <p>Retail monitoring platform using agent workflows over streaming data to answer business questions and generate executive summaries.</p>
-              <div class="chips">
-                <span>LangGraph</span>
-                <span>Kafka</span>
-                <span>Prometheus</span>
-                <span>Grafana</span>
-              </div>
-              <a href="https://github.com/varshith-k" target="_blank" rel="noreferrer">View more</a>
-            </article>
+            </div>
+            <p>
+              Event-driven retail intelligence platform streaming live sales events through
+              Kafka/Redpanda, with a LangChain/LangGraph AI layer that answers business questions
+              in natural language over the live data, and Prometheus/Grafana observability for
+              latency and anomaly rates.
+            </p>
+            <div class="chip-row">
+              <span>FastAPI</span><span>Kafka</span><span>PostgreSQL</span><span>LangGraph</span><span>Docker</span>
+            </div>
+            <a class="card-link" href="https://github.com/varshith-k/RetailBrain" target="_blank" rel="noreferrer">
+              View source <svg class="icon" width="14" height="14"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
 
-            <article class="project-card">
-              <span class="tag">Full-Stack Web App</span>
-              <h4>Bookmyseva</h4>
-              <p>Service marketplace app for discovering local professionals through a Django-based platform and simple usable frontend.</p>
-              <div class="chips">
-                <span>Django</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-              <a href="https://github.com/varshith-k" target="_blank" rel="noreferrer">View more</a>
-            </article>
+          <article class="project-card reveal">
+            <div class="project-card-top">
+              <p class="case-tag">Real-Time Analytics</p>
+              <h4>CryptoPulse AI</h4>
+            </div>
+            <p>
+              Real-time crypto analytics platform computing technical indicators over streaming
+              market data. A grounded agent — sharing one tool registry with its own MCP server —
+              explains market movements and flags anomalies, with JWT auth and a fully
+              Dockerized local deployment.
+            </p>
+            <div class="chip-row">
+              <span>React</span><span>TypeScript</span><span>FastAPI</span><span>Kafka</span><span>MCP</span>
+            </div>
+            <a class="card-link" href="https://github.com/varshith-k/cryptopulse-ai" target="_blank" rel="noreferrer">
+              View source <svg class="icon" width="14" height="14"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-top">
+              <p class="case-tag">Systems Programming</p>
+              <h4>NetPulse</h4>
+            </div>
+            <p>
+              C++17 TCP/UDP communication system: multithreaded connection handling, message
+              routing, structured JSON logging, live throughput/latency metrics, and a UDP
+              heartbeat discovery beacon, built for systems-and-networking interview prep.
+            </p>
+            <div class="chip-row">
+              <span>C++17</span><span>Sockets</span><span>Multithreading</span>
+            </div>
+            <a class="card-link" href="https://github.com/varshith-k/NetPulse" target="_blank" rel="noreferrer">
+              View source <svg class="icon" width="14" height="14"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-top">
+              <p class="case-tag">Distributed Systems · UF Coursework</p>
+              <h4>Gossip &amp; Push-Sum</h4>
+            </div>
+            <p>
+              Actor-based simulator (Gleam/Erlang) implementing gossip rumor-spreading and
+              asynchronous push-sum convergence across full, line, 3D-grid, and imperfect-grid
+              topologies — written for UF's Distributed Operating Systems Principles.
+            </p>
+            <div class="chip-row">
+              <span>Gleam</span><span>Erlang/OTP</span><span>Actors</span>
+            </div>
+            <a class="card-link" href="https://github.com/varshith-k/gossip-and-push-sum-algo" target="_blank" rel="noreferrer">
+              View source <svg class="icon" width="14" height="14"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-top">
+              <p class="case-tag">3D Web</p>
+              <h4>ModelVista 3D</h4>
+            </div>
+            <p>
+              Full-stack 3D product viewer for cataloging and inspecting GLB/GLTF assets from any
+              URL-ready storage — search and filter a catalog, then orbit/pan/zoom a model with
+              React Three Fiber before it ships to ecommerce, AR, or configurator workflows.
+            </p>
+            <div class="chip-row">
+              <span>React Three Fiber</span><span>FastAPI</span><span>PostgreSQL</span>
+            </div>
+            <a class="card-link" href="https://github.com/varshith-k/ModelVista3D" target="_blank" rel="noreferrer">
+              View source <svg class="icon" width="14" height="14"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-top">
+              <p class="case-tag">Microservice</p>
+              <h4>Resume Parser Service</h4>
+            </div>
+            <p>
+              A hosted resume-parsing microservice exposing a single parse endpoint — deployed to
+              an Azure VM for an internal proof of concept during early internship work.
+            </p>
+            <div class="chip-row">
+              <span>Python</span><span>REST API</span><span>Azure</span>
+            </div>
+            <a class="card-link" href="https://github.com/varshith-k/Resume-Parser" target="_blank" rel="noreferrer">
+              View source <svg class="icon" width="14" height="14"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+        </div>
+
+        <details class="more-projects reveal">
+          <summary>
+            <span>More from the archive — IIITS Grader, BookMySeva, and earlier builds</span>
+            <svg class="icon" width="16" height="16"><use href="#i-plus"/></svg>
+          </summary>
+          <div class="archive-grid">
+            <a class="archive-item" href="https://github.com/varshith-k/IIITSGrader" target="_blank" rel="noreferrer">
+              <strong>IIITS Grader</strong>
+              <span>Static site for calculating semester grades at IIIT Sri City.</span>
+            </a>
+            <a class="archive-item" href="https://github.com/varshith-k/bookmySeva" target="_blank" rel="noreferrer">
+              <strong>BookMySeva</strong>
+              <span>Django service-marketplace app — undergrad team capstone, 5-person team.</span>
+            </a>
+            <a class="archive-item" href="https://github.com/varshith-k" target="_blank" rel="noreferrer">
+              <strong>More on GitHub</strong>
+              <span>Full history of commits, experiments, and in-progress work.</span>
+            </a>
           </div>
-        </section>
+        </details>
+      </section>
 
-        <section id="contact" class="card contact-card">
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h3>Let’s build something useful and ambitious.</h3>
-            <p class="section-copy">
-              If you’re hiring for software engineering, ML systems, platform engineering,
-              or agentic AI work, I’d be glad to connect.
+      <section class="section" id="about">
+        <div class="section-head reveal">
+          <p class="section-kicker">02 — About</p>
+          <h2 class="section-title">From IIIT Sri City to production<br class="br-desktop" /> systems at Couture AI, now at UF.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p>
+              I started out building full-stack class projects at IIIT Sri City, graduated into
+              nearly three years as a software engineer at Couture AI, and I'm now back in school
+              at the University of Florida to go deeper on the systems side — distributed systems,
+              ML, and the theory behind the tools I'd already been shipping with in production.
+            </p>
+            <p>
+              Most of what I build sits at the intersection of backend engineering and applied
+              AI: services that have to stay correct and fast under real load, with an LLM or
+              retrieval layer bolted on in a way that's observable instead of magical. I like
+              projects that are honest about their own limitations — Copart Conversational Search
+              tells you outright when a filter can't match anything instead of faking a result,
+              and that's the kind of engineering judgment I try to bring everywhere.
+            </p>
+            <p>
+              Outside of coursework and internships, I build weekend and hackathon projects
+              (Hurricane Week, built for ShellHacks/MLH) because shipping something end-to-end in
+              a weekend is still the fastest way I know to learn a new piece of infrastructure.
             </p>
           </div>
-          <div class="cta-row">
-            <a class="button button-primary" href="mailto:vishnusaivarshith@gmail.com">Email Me</a>
-            <a class="button button-secondary" href="https://linkedin.com/in/varshith-kaki" target="_blank" rel="noreferrer">LinkedIn</a>
+
+          <div class="about-focus reveal">
+            <p class="section-label">What I keep coming back to</p>
+            <ul class="focus-list">
+              <li>Backend services &amp; distributed systems</li>
+              <li>RAG, agents, and grounded LLM applications</li>
+              <li>Data platforms &amp; streaming pipelines</li>
+              <li>Cloud infrastructure &amp; observability</li>
+              <li>Hackathons &amp; fast, scoped prototypes</li>
+            </ul>
           </div>
-        </section>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-head reveal">
+          <p class="section-kicker">03 — Experience</p>
+          <h2 class="section-title">Nearly three years in production,<br class="br-desktop" /> now split across research and industry.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal" data-open="true">
+            <button class="timeline-trigger" type="button" aria-expanded="true">
+              <div class="timeline-trigger-head">
+                <span class="timeline-dates">2026 — Present</span>
+                <h3>Application Developer</h3>
+                <p class="timeline-org">UF College of Medicine, Dept. of Health Outcomes &amp; Biomedical Informatics · Remote</p>
+              </div>
+              <svg class="icon chevron" width="18" height="18"><use href="#i-plus"/></svg>
+            </button>
+            <div class="timeline-panel">
+              <ul>
+                <li>Healthcare AI research: data cleaning and extraction, and NLP/ML model development for clinical decision support.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <button class="timeline-trigger" type="button" aria-expanded="false">
+              <div class="timeline-trigger-head">
+                <span class="timeline-dates">Apr 2026 — Sep 2026</span>
+                <h3>Agentic AI &amp; Platform Engineering Intern</h3>
+                <p class="timeline-org">UF Information Technology (UFIT) · Gainesville, FL</p>
+              </div>
+              <svg class="icon chevron" width="18" height="18"><use href="#i-plus"/></svg>
+            </button>
+            <div class="timeline-panel">
+              <ul>
+                <li>Built agentic AI workflows and automation for the NaviGator AI platform (n8n, LangChain, OpenAI APIs); created reusable prompt libraries and GenAI evaluation pipelines.</li>
+                <li>Fine-tuned AI responses on domain-specific datasets and ran adversarial and regression testing to improve relevance, accuracy, and reliability.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <button class="timeline-trigger" type="button" aria-expanded="false">
+              <div class="timeline-trigger-head">
+                <span class="timeline-dates">May 2026 — Aug 2026</span>
+                <h3>AI/ML Intern</h3>
+                <p class="timeline-org">Ensora Health · Orlando, FL</p>
+              </div>
+              <svg class="icon chevron" width="18" height="18"><use href="#i-plus"/></svg>
+            </button>
+            <div class="timeline-panel">
+              <ul>
+                <li>Architected end-to-end RAG systems with vector databases for context-aware healthcare document retrieval.</li>
+                <li>Built an AI-powered RCM Highlights Agent (LLMs + workflow orchestration) extracting insights from Revenue Cycle Management data and generating automated stakeholder-ready reports.</li>
+                <li>Benchmarked LLM frameworks (LangChain, LlamaIndex) on accuracy, latency, scalability, and cost.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <button class="timeline-trigger" type="button" aria-expanded="false">
+              <div class="timeline-trigger-head">
+                <span class="timeline-dates">Jul 2022 — Aug 2025</span>
+                <h3>Software Engineer</h3>
+                <p class="timeline-org">Couture AI · Bengaluru, India</p>
+              </div>
+              <svg class="icon chevron" width="18" height="18"><use href="#i-plus"/></svg>
+            </button>
+            <div class="timeline-panel">
+              <ul>
+                <li>Developed production LLM-powered microservices (summarization, classification, structured extraction) with prompt templates, output schema validation, and logging for reliable deployments.</li>
+                <li>Built a LangChain RAG system with FAISS vector search as a Dockerized inference API with Prometheus/Grafana monitoring; engineered LangGraph multi-agent workflows with guardrails and fallbacks.</li>
+                <li>Designed large-scale ETL pipelines (Azure Data Factory, Databricks) for pre-processing high-volume datasets; optimized runtimes via modularization and parallelism.</li>
+                <li>Revamped the Python backend of a global banking system (encryption, parallelization, modularization), cutting API latency 80%+; built Django/Flask REST APIs serving millions of daily requests.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-head reveal">
+          <p class="section-kicker">04 — Skills</p>
+          <h2 class="section-title">The stack I actually ship with.</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3>AI / ML</h3>
+            <div class="chip-row">
+              <span>LangChain</span><span>LangGraph</span><span>LlamaIndex</span><span>RAG</span>
+              <span>Prompt Engineering</span><span>LLMs</span><span>PyTorch</span><span>NLP</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Languages</h3>
+            <div class="chip-row">
+              <span>Python</span><span>Go</span><span>Java</span><span>C / C++</span>
+              <span>TypeScript</span><span>SQL</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Frameworks &amp; Data</h3>
+            <div class="chip-row">
+              <span>Django</span><span>Flask</span><span>FastAPI</span><span>React</span>
+              <span>Kafka</span><span>Spark</span><span>Databricks</span><span>PostgreSQL</span>
+              <span>MongoDB</span><span>Redis</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Cloud &amp; DevOps</h3>
+            <div class="chip-row">
+              <span>AWS</span><span>Azure</span><span>GCP</span><span>Docker</span>
+              <span>Kubernetes</span><span>CI/CD</span><span>Prometheus</span><span>Grafana</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="section-head reveal">
+          <p class="section-kicker">05 — Education &amp; Certifications</p>
+          <h2 class="section-title">Credentials, briefly.</h2>
+        </div>
+
+        <div class="edu-grid">
+          <article class="edu-card reveal">
+            <p class="case-tag">Aug 2025 — Dec 2026</p>
+            <h3>University of Florida</h3>
+            <p class="edu-degree">M.S. Computer Science · GPA 4.0 / 4.0</p>
+            <p class="edu-location">Gainesville, FL</p>
+          </article>
+          <article class="edu-card reveal">
+            <p class="case-tag">Aug 2019 — May 2023</p>
+            <h3>IIIT Sri City</h3>
+            <p class="edu-degree">B.Tech Computer Science · CGPA 9.32 / 10</p>
+            <p class="edu-location">Sri City, India</p>
+          </article>
+        </div>
+
+        <div class="cert-row reveal">
+          <p class="section-label">Certifications</p>
+          <ul class="cert-list">
+            <li>NVIDIA Certified — AI Agents (Multimodal)</li>
+            <li>DeepLearning.AI — Machine Learning Specialization</li>
+            <li>Microsoft Certified — Azure Fundamentals</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-inner reveal">
+          <p class="section-kicker">06 — Contact</p>
+          <h2 class="contact-title">Have something interesting<br />in mind? Let's build it.</h2>
+          <p class="contact-copy">
+            Hiring for software engineering, backend/distributed systems, or AI/ML roles — or just
+            want to talk shop about an architecture? My inbox is open.
+          </p>
+
+          <div class="contact-actions">
+            <button class="button button-primary magnetic" id="copy-email" type="button" data-email="vishnusaivarshith@gmail.com">
+              <svg class="icon icon-copy" width="16" height="16"><use href="#i-copy"/></svg>
+              <svg class="icon icon-check" width="16" height="16" hidden><use href="#i-check"/></svg>
+              <span class="copy-label">vishnusaivarshith@gmail.com</span>
+            </button>
+            <a class="button button-outline magnetic" href="./assets/Varshith-Kaki-Resume.pdf" download>
+              <svg class="icon" width="16" height="16"><use href="#i-download"/></svg> Resume
+            </a>
+          </div>
+
+          <div class="contact-links">
+            <a href="https://github.com/varshith-k" target="_blank" rel="noreferrer">
+              <svg class="icon" width="18" height="18"><use href="#i-github"/></svg> GitHub
+            </a>
+            <a href="https://linkedin.com/in/varshith-kaki" target="_blank" rel="noreferrer">
+              <svg class="icon" width="18" height="18"><use href="#i-linkedin"/></svg> LinkedIn
+            </a>
+            <a href="mailto:vishnusaivarshith@gmail.com">
+              <svg class="icon" width="18" height="18"><use href="#i-mail"/></svg> Email
+            </a>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> Vishnu Sai Varshith Kaki. Built for GitHub Pages.</p>
+      <p>© <span id="year"></span> Vishnu Sai Varshith Kaki</p>
+      <p>Built from scratch · Gainesville, FL</p>
     </footer>
+
+    <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">
+      <svg class="icon" width="18" height="18" style="transform:rotate(-90deg)"><use href="#i-arrow"/></svg>
+    </button>
 
     <script src="./script.js"></script>
   </body>
